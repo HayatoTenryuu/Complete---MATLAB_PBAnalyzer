@@ -1,7 +1,7 @@
 # <ins> Sample Program </ins>
 
 ### Purpose: 
-This is just to try out web scraping and analyzing scraped data all using MATLAB.
+This is just to try out analyzing data using MATLAB.
 This sort of operation has some interesting and useful functions that I would like
 to remember how to use for later projects.
 
@@ -30,16 +30,27 @@ but if you can't match anything, it's a waste of money. Winnings follow these ru
 ### How to use this project:
 1. Download all the files, obviously. Put them in a dedicated folder,
     as this will become your working folder.
-2. Run either App.mlapp or main.m - they are both the same thing.
-3. Click the buttons in order from top to bottom, making sure they finish
-    before you click the next one. Also make sure you have internet. The first
+2. Run App.m
+3. Click the buttons in order from top to bottom, making sure they finish before you click the next one. Also make sure you have internet. The first
     step is to download some reference data, after all.
-4. Once the last step is complete, take your numbers and buy a powerball ticket.
-5. Optional step, but it exists if you want it - you can see what kind of pattern the previous numbers fell as
-    by opening the "figure\Powerball stats.xlsx" file. Numbers with a 1 next to them were the previous winning
-    numbers, and columns are ordered by likely-medium-unlikely.
+4. Last step, you can see what kind of pattern the previous numbers fell as the bar chart in the figure folder. There is one for 
+    each year since 2020, as well as a total chart. This divides things by the schema, a categorization of how many numbers were
+    drawn from the most likely third, from the mid third, and from the least likely third. So for white balls, you can have ones
+    like 1-2-2, 3-1-1, etc. The schemas are as follows:
 
+	The data sits nicely as a triangle, but in order to draw it as a bar chart, I had to make it a 5x11 instead.
+
+	A. In the "All in One" category is 
+		5-0-0 (Top Heavy), 0-5-0 (Perfectly Balanced), and 0-0-5 (Bottom Heavy).
+	B. In the "Outer Pair" cetegory is 
+		4-0-1 (Top Leaning), 3-0-2 (Mid Leaning Up), 2-0-3 (Mid Leaning Down), and 1-0-4 (Bottom Leaning)
+	C. In the "Middle Exchange" category is 
+		4-1-0 (Top Weighted), 3-2-0 (Top Leaning), 2-3-0 (Mid but Top Weighted), 1-4-0 (Mid Leaning Up), 0-4-1 (Mid Leaning Down), 0-3-2 (Mid but Bottom Weighted), 
+			0-2-3 (Bottom Leaning), 0-1-4 (Bottom Weighted)
+	D. In the "Triple, Outer Heavy" category is 
+		3-1-1 (Mid but Top Weighted), 2-2-1 (Mid Leaning Up), 2-1-2 (Perfectly Balanced), 1-2-2 (Mid Leaning Down), and 1-1-3 (Mid but Bottom Weighted)
+	E. In the "Triple, Inner HEavy" category is 
+		1-3-1 (Perfectly Balanced)
+   
 ### Future updates (if I care to keep going):
-1. Identify the most common pattern of number pulls historically - whether it tends to pull 2 from medium, 2 from
-    unlikely, and 1 from likely, or different patters from different years, etc (year 1 will not have data). This
-    feature would have both yearly and total versions being output.
+1. Merge with PB Parser so that top yearly and overall schemas are used in generating numbers.
